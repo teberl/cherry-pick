@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { SupabaseService } from '../../core/services/supabase.service';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    imports: [CommonModule],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
   connectionStatus: 'checking' | 'connected' | 'error' = 'checking';
