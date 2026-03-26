@@ -1,0 +1,16 @@
+<main class="home">
+  <div class="hero">
+    <h1>🍒 Cherry Pick</h1>
+    <p class="tagline">Custody sharing, simplified.</p>
+  </div>
+
+  <section class="status">
+    <h2>System Status</h2>
+    <div class="status-item" [ngClass]="connectionStatus">
+      <span class="indicator"></span>
+      <span *ngIf="connectionStatus === 'checking'">Connecting to Supabase…</span>
+      <span *ngIf="connectionStatus === 'connected'">✅ Supabase connected</span>
+      <span *ngIf="connectionStatus === 'error'">⚠️ Supabase not reachable (check environment variables)</span>
+    </div>
+  </section>
+</main>
