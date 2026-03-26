@@ -8,9 +8,15 @@
     <h2>System Status</h2>
     <div class="status-item" [ngClass]="connectionStatus">
       <span class="indicator"></span>
-      <span *ngIf="connectionStatus === 'checking'">Connecting to Supabase…</span>
-      <span *ngIf="connectionStatus === 'connected'">✅ Supabase connected</span>
-      <span *ngIf="connectionStatus === 'error'">⚠️ Supabase not reachable (check environment variables)</span>
+      @if (connectionStatus === 'checking') {
+        <span>Connecting to Supabase…</span>
+      }
+      @if (connectionStatus === 'connected') {
+        <span>✅ Supabase connected</span>
+      }
+      @if (connectionStatus === 'error') {
+        <span>⚠️ Supabase not reachable (check environment variables)</span>
+      }
     </div>
   </section>
 </main>
